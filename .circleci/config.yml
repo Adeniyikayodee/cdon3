@@ -116,9 +116,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: [backend-build]
+          keys: [backend-deps]
       - run:
-          name: Scan backend
+          name: Build backend
           command: |
             cd backend
             npm install
